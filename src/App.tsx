@@ -1,11 +1,11 @@
-import image from "./assets/Orizzontale_NoLogo.avif";
-import Header from "./header";
+import Header from "./components/header";
+import WelcomePost from "./components/welcome.post";
 
 const App = () => {
   return (
     <main>
       <Header />
-      <img src={image} />
+      <WelcomePost />
     </main>
   );
 };
