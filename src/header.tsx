@@ -3,7 +3,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 w-full bg-transparent">
+    <header className="fixed top-0 w-full bg-transparent font-gucci">
       <div>
         <button className="size-[24px]">
           <RiSearch2Line className="size-[16px]" />
