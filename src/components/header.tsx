@@ -19,10 +19,14 @@ const Header = () => {
     >
       <div className="py-[1.5rem] px-[2rem] flex justify-between">
         <button
-          className={clsx("flex items-center gap-2 group duration-1000", {
-            "opacity-0": y === 0,
-            "opacity-100": y && y > 0,
-          })}
+          disabled={y === 0}
+          className={clsx(
+            "flex items-center gap-2 group duration-1000 opacity-0",
+            {
+              "opacity-0": y === 0,
+              "opacity-100": y && y > 0,
+            }
+          )}
         >
           <GoPlus className="group-hover:rotate-90 duration-200" />
           <span>Contact Us</span>
@@ -41,8 +45,8 @@ const Header = () => {
           className={clsx(
             "absolute left-1/2 -translate-x-1/2 duration-500 select-none ",
             {
-              "text-[300px] top-0 tracking-[150px]": y === 0,
-              "text-[40px] top-1 tracking-[20px]": y && y > 0,
+              "text-[300px] top-0 tracking-[150px] text-white/50": y === 0,
+              "text-[40px] top-1 tracking-[20px] text-black": y && y > 0,
             }
           )}
         >
