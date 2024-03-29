@@ -5,12 +5,12 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { GoPlus } from "react-icons/go";
 
 const Header = () => {
-  const [{ x, y }, scrollTo] = useWindowScroll();
+  const [{ y }] = useWindowScroll();
 
   return (
     <header
       className={clsx(
-        "fixed top-0 w-full bg-transparent font-sans px-20 duration-300 z-50",
+        "fixed top-0 w-full bg-transparent font-sans px-20 duration-300 z-50 select-none",
         {
           "text-white bg-transparent": y === 0,
           "text-black bg-white shadow-sm": y && y > 0,
@@ -42,13 +42,10 @@ const Header = () => {
           </button>
         </div>
         <div
-          className={clsx(
-            "absolute left-1/2 -translate-x-1/2 duration-500 select-none ",
-            {
-              "text-[300px] top-0 tracking-[150px] text-white/50": y === 0,
-              "text-[40px] top-1 tracking-[20px] text-black": y && y > 0,
-            }
-          )}
+          className={clsx("absolute left-1/2 -translate-x-1/2 duration-500", {
+            "text-[300px] top-0 tracking-[150px] text-white/50": y === 0,
+            "text-[40px] top-1 tracking-[20px] text-black": y && y > 0,
+          })}
         >
           GUCCI
         </div>

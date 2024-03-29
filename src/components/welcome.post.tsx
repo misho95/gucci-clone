@@ -10,7 +10,7 @@ const WelcomePost = () => {
   }, []);
 
   return (
-    <div className="w-full h-fit relative">
+    <div className="w-full h-fit relative select-none pointer-events-none">
       <img src={image} />
 
       <div className="w-full sticky bottom-2">
@@ -28,7 +28,7 @@ const WelcomePost = () => {
           </h3>
           <button
             className={clsx(
-              "bg-white rounded-[2px] duration-[0.8s] hover:scale-90 py-[16px] px-[24px] uppercase font-bold text-[0.75rem] ease-in-out ",
+              "bg-white rounded-[2px] duration-[0.8s] hover:scale-90 py-[16px] px-[24px] uppercase font-bold text-[0.75rem] ease-in-out pointer-events-auto",
               {
                 "opacity-0 translate-y-[100%]": seen === false,
                 "opacity-100": seen === true,
