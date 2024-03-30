@@ -6,7 +6,7 @@ import WelcomePost from "./components/welcome.post";
 const App = () => {
   return (
     <main
-      className="w-full min-h-screen flex flex-col"
+      className="w-full min-h-screen flex flex-col items-center"
       style={{ scrollbarWidth: "none" }}
     >
       <Header />

@@ -7,7 +7,7 @@ import TitleTag from "./title-tag";
 
 const SecondPost = () => {
   return (
-    <section className="gap-[1rem] p-[1rem] grid grid-cols-2">
+    <section className="gap-[1rem] p-[1rem] grid grid-cols-1 sm:grid-cols-2">
       <figure className="aspect-[0.75] w-full h-fit relative">
         <TitleTag title={"women"} />
         <img
