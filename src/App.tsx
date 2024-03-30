@@ -1,3 +1,4 @@
+import Featured from "./components/featured";
 import Header from "./components/header";
 import SecondPost from "./components/second.post";
 import WelcomePost from "./components/welcome.post";
@@ -11,6 +12,7 @@ const App = () => {
       <Header />
       <WelcomePost />
       <SecondPost />
+      <Featured />
     </main>
   );
 };
