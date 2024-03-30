@@ -3,7 +3,7 @@ import SpinButton from "./spin.button";
 
 const Featured = () => {
   return (
-    <section className="mt-[4rem] sm:mt-[8rem] mx-[1rem] sm:mx-[4rem] mb-[10rem] max-w-[1440px] ">
+    <section className="mt-[4rem] sm:mt-[8rem] mx-[1rem] sm:mx-[4rem] mb-[5rem] sm:mb-[10rem] max-w-[1440px] ">
       <h3 className="mb-[5rem] sm:mb-[10rem] text-[1rem] font-bold uppercase w-full text-center">
         featured
       </h3>

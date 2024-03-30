@@ -31,12 +31,9 @@ const Services = () => {
   };
 
   return (
-    <section
-      style={{}}
-      className="mt-[4rem] sm:mt-[8rem] mx-[1rem] sm:mx-[4rem] mb-[10rem] max-w-[1440px] m-auto"
-    >
+    <section className=" max-w-[1440px] m-auto">
       <div className="max-w-[432px] text-center">
-        <h1 className="text-[3rem] leading-[3rem] font-light pt-[80px] pb-[32px]">
+        <h1 className="text-[3rem] leading-[3rem] font-light sm:pt-[80px] pb-[32px]">
           GUCCI SERVICES
         </h1>
         <div className="flex flex-col gap-5 py-[48px] items-center">
