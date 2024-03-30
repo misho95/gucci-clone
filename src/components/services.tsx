@@ -5,7 +5,7 @@ const Services = () => {
   const [props, api] = useSpring(() => ({
     from: {
       width: "100%",
-      right: "0",
+      right: "auto",
       left: "auto",
     },
   }));
@@ -15,6 +15,7 @@ const Services = () => {
       from: {
         width: "100%",
         right: "0",
+        left: "auto",
       },
       to: [
         {
