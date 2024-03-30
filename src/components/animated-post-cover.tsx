@@ -1,34 +1,50 @@
-import { animated, useSpring } from "@react-spring/web";
+import { animated, useInView, useSpring } from "@react-spring/web";
+import { useEffect, useState } from "react";
 
 type PropsType = {
   title: {
     button: string;
     h3: string;
   };
-  upperCase: boolean;
+  upperCase?: boolean;
 };
 
-const AnimatedPostCover = ({ title, upperCase }: PropsType) => {
-  const springTitle = useSpring({
-    from: { opacity: 0, transform: "translate(0%,100%)" },
-    to: { opacity: 1, transform: "translate(0%,0%)" },
-    config: {
-      duration: 800,
-    },
-    delay: 500,
-  });
+const AnimatedPostCover = ({ title, upperCase = false }: PropsType) => {
+  const [ref, inView] = useInView();
+  const [stop, setStop] = useState(false);
 
-  const springButton = useSpring({
+  const [springTitle, animateTitle] = useSpring(() => ({
     from: { opacity: 0, transform: "translate(0%,100%)" },
-    to: { opacity: 1, transform: "translate(0%,0%)" },
-    config: {
-      duration: 800,
-    },
-    delay: 500,
-  });
+  }));
+
+  const [springButton, animateButton] = useSpring(() => ({
+    from: { opacity: 0, transform: "translate(0%,100%)" },
+  }));
+
+  useEffect(() => {
+    if (inView && !stop) {
+      animateTitle.start({
+        from: { opacity: 0, transform: "translate(0%,100%)" },
+        to: { opacity: 1, transform: "translate(0%,0%)" },
+        config: {
+          duration: 800,
+        },
+        delay: 500,
+      });
+      animateButton.start({
+        from: { opacity: 0, transform: "translate(0%,100%)" },
+        to: { opacity: 1, transform: "translate(0%,0%)" },
+        config: {
+          duration: 800,
+        },
+        delay: 500,
+      });
+      setStop(true);
+    }
+  }, [inView]);
 
   return (
-    <div className="w-full h-[50%] bottom-0 absolute">
+    <div className="w-full h-[50%] bottom-0 absolute" ref={ref}>
       <div className="w-full h-full relative">
         <div className="w-full h-full" />
         <div className="w-full h-fit sticky bottom-2">
