@@ -2,6 +2,8 @@ import { useWindowScroll } from "@uidotdev/usehooks";
 import clsx from "clsx";
 import { RiSearch2Line } from "react-icons/ri";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { MdOutlineShoppingBag } from "react-icons/md";
+import { FiUser } from "react-icons/fi";
 import SpinButton from "./spin.button";
 
 const Header = () => {
@@ -29,11 +31,17 @@ const Header = () => {
 
         <div className="flex gap-5 items-center ">
           <button className="size-[24px] duration-300">
-            <RiSearch2Line className="size-[16px]" />
+            <FiUser className="size-[20px]" />
+          </button>
+          <button className="size-[24px] duration-300">
+            <MdOutlineShoppingBag className="size-[20px]" />
+          </button>
+          <button className="size-[24px] duration-300">
+            <RiSearch2Line className="size-[20px]" />
           </button>
 
           <button className="flex items-center h-[24px] gap-2 duration-300">
-            <RxHamburgerMenu className="size-[16px]" />
+            <RxHamburgerMenu className="size-[20px]" />
             <span className="uppercase font-inherit hidden sm:block">menu</span>
           </button>
         </div>
