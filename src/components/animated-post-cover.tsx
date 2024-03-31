@@ -48,17 +48,17 @@ const AnimatedPostCover = ({ title, upperCase = false }: PropsType) => {
       <div className="w-full h-full relative">
         <div className="w-full h-full" />
         <div className="w-full h-fit sticky bottom-2">
-          <div className="absolute bottom-[2.5rem] left-1/2 -translate-x-1/2 flex flex-col gap-[1rem] justify-center items-center">
+          <div className="w-full absolute bottom-[2.5rem] left-1/2 -translate-x-1/2 flex flex-col gap-[1rem] justify-center items-center">
             <animated.h3
               style={springTitle}
-              className={`text-[2rem] text-white ${
+              className={`text-[1.5rem] sm:text-[2rem] text-white ${
                 upperCase ? "uppercase" : "capitalize"
               }`}
             >
               {title.h3}
             </animated.h3>
             <animated.div style={springButton}>
-              <button className="bg-white rounded-[2px] py-[16px] px-[24px] uppercase font-bold text-[0.75rem] pointer-events-auto hover:scale-90 duration-[0.8s]">
+              <button className="w-full bg-white rounded-[2px] py-[16px] px-[24px] uppercase font-bold text-[0.75rem] pointer-events-auto hover:scale-90 duration-[0.8s]">
                 {title.button}
               </button>
             </animated.div>
