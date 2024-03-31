@@ -49,7 +49,7 @@ const Header = () => {
           className={clsx("absolute left-1/2 -translate-x-1/2 duration-500", {
             "text-[90px] sm:text-[150px] lg:text-[300px] top-5 sm:top-0 tracking-[25px] sm:tracking-[50px] lg:tracking-[150px] text-white/50":
               y === 0,
-            "text-[40px] top-1 sm:top-0 left-5 sm:left-1/2 translate-x-0 sm:-translate-x-1/2 tracking-[20px] text-black":
+            "text-[30px] top-3 sm:top-0 left-5 sm:left-1/2 translate-x-0 sm:-translate-x-1/2 tracking-[20px] text-black":
               y && y > 0,
           })}
         >
