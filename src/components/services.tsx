@@ -32,7 +32,7 @@ const Services = () => {
   };
 
   return (
-    <section className=" max-w-[1440px] m-auto">
+    <section className=" max-w-[1440px] m-auto mx-[1rem] sm:mx-[4rem]">
       <div className="max-w-[432px] text-center">
         <h1 className="text-[3rem] leading-[3rem] font-light sm:pt-[80px] pb-[32px]">
           GUCCI SERVICES
