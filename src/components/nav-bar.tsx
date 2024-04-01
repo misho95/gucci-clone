@@ -33,7 +33,7 @@ const NavBar = ({
       <div
         onClick={(e) => e.stopPropagation()}
         className={clsx(
-          "h-full w-full sm:w-fit p-[5rem] bg-white duration-700 relative ease-[cubic-bezier(0.5,0,0,1)] overflow-y-auto",
+          "h-full w-full sm:w-fit p-[5rem] bg-white duration-700 relative ease-[cubic-bezier(0.5,0,0,1)] overflow-y-auto overflow-x-hidden",
           {
             "translate-y-full sm:translate-y-0 sm:translate-x-full": !open,
             "translate-y-0 sm:translate-x-0": open,

@@ -9,11 +9,14 @@ const WelcomePost = () => {
     config: {
       duration: 500,
     },
+    delay: 500,
   });
 
   return (
     <div className="w-full h-fit relative select-none pointer-events-none">
-      <animated.img style={spring} src={image} className="w-full h-full" />
+      <div className="w-full  h-full overflow-hidden">
+        <animated.img style={spring} src={image} className="w-full h-full" />
+      </div>
 
       <AnimatedPostCover
         title={{ button: "explore men's loafers", h3: "Horsebit 1953" }}
