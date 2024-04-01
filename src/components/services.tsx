@@ -1,36 +1,7 @@
-import { animated, useSpring } from "@react-spring/web";
 import Image from "../assets/Book_an_Appointment_poster_11.avif";
+import AnimatedLinks from "./animated-links";
 
 const Services = () => {
-  const [props, api] = useSpring(() => ({
-    from: {
-      width: "100%",
-      right: "auto",
-      left: "auto",
-    },
-  }));
-
-  const animateHandler = () => {
-    api.start({
-      from: {
-        width: "100%",
-        right: "0",
-        left: "auto",
-      },
-      to: [
-        {
-          width: "0",
-          right: "0",
-        },
-        {
-          width: "100%",
-          left: "0",
-          right: "auto",
-        },
-      ],
-    });
-  };
-
   return (
     <section className=" max-w-[1440px] m-auto mx-[1rem] sm:mx-[4rem]">
       <div className="max-w-[432px] text-center">
@@ -48,15 +19,7 @@ const Services = () => {
             you through a hand-picked selection of pieces for you to try-on and
             style.
           </p>
-          <a href="#" className="w-fit relative" onMouseEnter={animateHandler}>
-            <span className="text-[1rem] font-medium leading-[1.5]">
-              Book an In Store Appointment
-            </span>
-            <animated.div
-              style={props}
-              className={"h-[1px] bg-black absolute"}
-            />
-          </a>
+          <AnimatedLinks title="Book an In Store Appointment" color="black" />
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 import FooterInput from "./footer.input";
-import FooterLink from "./footer.link";
+import AnimatedLinks from "./animated-links";
 
 const Footer = () => {
   return (
@@ -9,21 +9,61 @@ const Footer = () => {
           <h3 className="font-bold text-[0.75rem] leading-[1rem] text-white/50 uppercase mb-[1.5rem]">
             MAY WE HELP YOU?
           </h3>
-          <FooterLink>Contact Us</FooterLink>
-          <FooterLink>FAQs</FooterLink>
-          <FooterLink>Email Unsubscribe</FooterLink>
-          <FooterLink>Sitemap</FooterLink>
+          <AnimatedLinks
+            title="Contact Us"
+            color="white"
+            styles={{ fontSize: "0.75rem" }}
+          />
+          <AnimatedLinks
+            title="FAQs"
+            color="white"
+            styles={{ fontSize: "0.75rem" }}
+          />
+          <AnimatedLinks
+            title="Email Unsubscribe"
+            color="white"
+            styles={{ fontSize: "0.75rem" }}
+          />
+          <AnimatedLinks
+            title="Sitemap"
+            color="white"
+            styles={{ fontSize: "0.75rem" }}
+          />
         </div>
         <div className="flex flex-col gap-2">
           <h3 className="font-bold text-[0.75rem] leading-[1rem] text-white/50 uppercase mb-[1.5rem]">
             THE COMPANY
           </h3>
-          <FooterLink>About Gucci</FooterLink>
-          <FooterLink>Gucci Equilibrium</FooterLink>
-          <FooterLink>Code of Ethics</FooterLink>
-          <FooterLink>Legal</FooterLink>
-          <FooterLink>Privacy & Cookie Policy</FooterLink>
-          <FooterLink>Corporate Information</FooterLink>
+          <AnimatedLinks
+            title="About Gucci"
+            color="white"
+            styles={{ fontSize: "0.75rem" }}
+          />
+          <AnimatedLinks
+            title="Gucci Equilibrium"
+            color="white"
+            styles={{ fontSize: "0.75rem" }}
+          />
+          <AnimatedLinks
+            title="Code of Ethics"
+            color="white"
+            styles={{ fontSize: "0.75rem" }}
+          />
+          <AnimatedLinks
+            title="Legal"
+            color="white"
+            styles={{ fontSize: "0.75rem" }}
+          />
+          <AnimatedLinks
+            title="Privacy & Cookie Policy"
+            color="white"
+            styles={{ fontSize: "0.75rem" }}
+          />
+          <AnimatedLinks
+            title="Corporate Information"
+            color="white"
+            styles={{ fontSize: "0.75rem" }}
+          />
         </div>
         <div className="sm:row-span-2 sm:col-span-2 flex flex-col gap-2">
           <h3 className="font-bold text-[0.75rem] leading-[1rem] text-white/50 uppercase mb-[1.5rem]">
@@ -44,8 +84,16 @@ const Footer = () => {
           <h3 className="font-bold text-[0.75rem] leading-[1rem] text-white/50 uppercase mb-[1.5rem]">
             GUCCI SERVICES
           </h3>
-          <FooterLink>Discover our services</FooterLink>
-          <FooterLink>Book an Appointment</FooterLink>
+          <AnimatedLinks
+            title="Discover our services"
+            color="white"
+            styles={{ fontSize: "0.75rem" }}
+          />
+          <AnimatedLinks
+            title="Book an Appointment"
+            color="white"
+            styles={{ fontSize: "0.75rem" }}
+          />
         </div>
         <div className="sm:col-span-4">
           © 2016 - 2022 Guccio Gucci S.p.A. - All rights reserved. SIAE LICENCE

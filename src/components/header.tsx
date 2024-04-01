@@ -6,7 +6,7 @@ import { MdOutlineShoppingBag } from "react-icons/md";
 import { FiUser } from "react-icons/fi";
 import SpinButton from "./spin.button";
 import { createPortal } from "react-dom";
-import NavBar from "./nav.bar";
+import NavBar from "./nav-bar";
 import { useState } from "react";
 
 const Header = () => {
