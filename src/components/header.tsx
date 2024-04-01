@@ -80,8 +80,9 @@ const Header = () => {
             )}
           >
             <div
-              className={clsx("w-full duration-[0.8s]", {
+              className={clsx("duration-[0.8s]", {
                 "w-[143px]": y && y > 0,
+                "w-full": y === 0,
               })}
             >
               <Logo
