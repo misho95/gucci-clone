@@ -2,8 +2,7 @@ import Image1 from "../assets/Gucci_HP_Mobile_9-16_Gucci-SS24-TierII-Feb24-1602-
 import Image2 from "../assets/Gucci_HP_Portrait_Routing2UP_ValigeriaWave1-RE-WEB.webp";
 import Image3 from "../assets/HP_Gucci-SS24-Jan24-1602-GUC-012-0579-R-v4-ME-300dpi-sRGB_001_Default.jpg";
 import Image4 from "../assets/Gucci_HP_Portrait_Gucci-SS24-Gucci-Eyewear-SS24-Dec23-1598-GUC-001-1088-R-v5-300dpi.avif";
-import AnimatedPostCover from "./animated-post-cover";
-import TitleTag from "./title-tag";
+
 import PostComponent from "./post-component";
 
 const posts = [
