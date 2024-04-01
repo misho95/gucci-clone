@@ -73,7 +73,7 @@ const Header = () => {
           </div> */}
           <div
             className={clsx(
-              "w-full absolute left-0 top-0 p-[1rem] pt-[4rem] sm:p-[5rem] z-50 flex justify-start sm:justify-center",
+              "w-full absolute left-0 top-0 p-[1rem] pt-[4rem] sm:p-[5rem] z-50 flex justify-start sm:justify-center pointer-events-none",
               {
                 "-top-[calc(100%-35px)] sm:-top-[calc(100%-18px)]": y && y > 0,
               }
