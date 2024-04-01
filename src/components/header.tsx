@@ -8,6 +8,7 @@ import SpinButton from "./spin.button";
 import { createPortal } from "react-dom";
 import NavBar from "./nav-bar";
 import { useState } from "react";
+import Logo from "./logo";
 
 const Header = () => {
   const [{ y }] = useWindowScroll();
@@ -60,7 +61,7 @@ const Header = () => {
               </span>
             </button>
           </div>
-          <div
+          {/* <div
             className={clsx("absolute left-1/2 -translate-x-1/2 duration-500", {
               "text-[90px] sm:text-[150px] lg:text-[300px] top-5 sm:top-0 tracking-[25px] sm:tracking-[50px] lg:tracking-[150px] text-white/50 pointer-events-none":
                 y === 0,
@@ -69,6 +70,30 @@ const Header = () => {
             })}
           >
             GUCCI
+          </div> */}
+          <div
+            className={clsx(
+              "w-full absolute left-0 top-0 p-[1rem] pt-[4rem] sm:p-[5rem] z-50 flex justify-start sm:justify-center",
+              {
+                "-top-[calc(100%-35px)] sm:-top-[calc(100%-18px)]": y && y > 0,
+              }
+            )}
+          >
+            <div
+              className={clsx("w-full duration-[0.8s]", {
+                "w-[143px]": y && y > 0,
+              })}
+            >
+              <Logo
+                className={clsx(
+                  "duration-[0.8s] ease-[cubic-bezier(0.5,0,0,1)]",
+                  {
+                    "opacity-50 fill-white": y === 0,
+                    "opacity-100 fill-black": y && y > 0,
+                  }
+                )}
+              />
+            </div>
           </div>
         </div>
       </header>
