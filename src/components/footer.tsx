@@ -1,5 +1,6 @@
 import FooterInput from "./footer.input";
 import AnimatedLinks from "./animated-links";
+import Logo from "./logo";
 
 const Footer = () => {
   return (
@@ -98,6 +99,9 @@ const Footer = () => {
         <div className="sm:col-span-4">
           © 2016 - 2022 Guccio Gucci S.p.A. - All rights reserved. SIAE LICENCE
           # 2294/I/1936 and 5647/I/1936
+        </div>
+        <div className="w-full sm:col-span-4">
+          <Logo className="fill-white" />
         </div>
       </div>
     </footer>
