@@ -13,9 +13,13 @@ const WelcomePost = () => {
   });
 
   return (
-    <div className="w-full h-fit relative select-none pointer-events-none">
+    <div className="w-full h-screen relative select-none pointer-events-none">
       <div className="w-full  h-full overflow-hidden">
-        <animated.img style={spring} src={image} className="w-full h-full" />
+        <animated.img
+          style={spring}
+          src={image}
+          className="w-full h-full object-cover"
+        />
       </div>
 
       <AnimatedPostCover
