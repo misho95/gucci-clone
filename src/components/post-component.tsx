@@ -1,7 +1,8 @@
-import { animated, useInView, useSpring } from "@react-spring/web";
+import { animated, useSpring } from "@react-spring/web";
 import AnimatedPostCover from "./animated-post-cover";
 import TitleTag from "./title-tag";
 import { useEffect, useState } from "react";
+import { useIntersectionObserver } from "@uidotdev/usehooks";
 
 type PropsType = {
   cat: string;
@@ -11,15 +12,19 @@ type PropsType = {
 };
 
 const PostComponent = ({ cat, img, title, button }: PropsType) => {
-  const [ref, inView] = useInView();
   const [stop, setStop] = useState(false);
+  const [ref, entry] = useIntersectionObserver({
+    threshold: 0,
+    root: null,
+    rootMargin: "0px",
+  });
 
   const [spring, animate] = useSpring(() => ({
     from: { transform: "scale(120%)" },
   }));
 
   useEffect(() => {
-    if (inView && !stop) {
+    if (entry?.isIntersecting && !stop) {
       animate.start({
         from: { transform: "scale(120%)" },
         to: { transform: "scale(100%)" },
@@ -31,7 +36,7 @@ const PostComponent = ({ cat, img, title, button }: PropsType) => {
 
       setStop(true);
     }
-  }, [inView]);
+  }, [entry?.isIntersecting]);
 
   return (
     <figure className="aspect-[0.75] w-full h-fit relative" ref={ref}>
