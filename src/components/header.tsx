@@ -26,7 +26,7 @@ const Header = () => {
           "fixed top-0 w-full bg-transparent font-sans duration-300 z-40 select-none",
           {
             "text-white bg-transparent": y === 0,
-            "text-black bg-white shadow-sm": y && y > 0,
+            "text-black bg-white shadow-sm": y !== 0,
           }
         )}
       >
@@ -34,7 +34,7 @@ const Header = () => {
           <div
             className={clsx("hidden sm:block duration-1000 opacity-0", {
               "opacity-0": y === 0,
-              "opacity-100": y && y > 0,
+              "opacity-100": y !== 0,
             })}
           >
             {y !== 0 && <SpinButton title="Contact Us" />}
@@ -65,14 +65,14 @@ const Header = () => {
             className={clsx(
               "w-full absolute left-0 p-[1rem] pt-[4rem] sm:p-[5rem] z-50 flex justify-start sm:justify-center pointer-events-none",
               {
-                "-top-[calc(100%-35px)] sm:-top-[calc(100%-18px)]": y && y > 0,
+                "-top-[calc(100%-35px)] sm:-top-[calc(100%-18px)]": y !== 0,
                 "top-0": y === 0,
               }
             )}
           >
             <div
               className={clsx("duration-[0.8s]", {
-                "w-[143px]": y && y > 0,
+                "w-[143px]": y !== 0,
                 "w-full": y === 0,
               })}
             >
@@ -81,7 +81,7 @@ const Header = () => {
                   "duration-[0.8s] ease-[cubic-bezier(0.5,0,0,1)]",
                   {
                     "opacity-50 fill-white": y === 0,
-                    "opacity-100 fill-black": y && y > 0,
+                    "opacity-100 fill-black": y !== 0,
                   }
                 )}
               />
